@@ -1,0 +1,12 @@
+<title>Quoting Dojo | Quotes</title>
+<body>
+    <h1>Here are some awesome quotes!</h1>
+    <hr>
+    @foreach(var quote in ViewBag.Quotes)
+    {
+        <p> "@quote["Quote"]" -@quote["Name"] @quote["CreatedAt"]</p>
+        <hr>
+    }
+    <a href="/">Go Back</a>
+</body>
+</html>

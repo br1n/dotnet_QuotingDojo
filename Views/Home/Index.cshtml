@@ -1,0 +1,24 @@
+@model Quotes
+<title>Quoting Dojo</title>
+<body>
+    <h1>Welcome to Quoting Dojo!</h1>
+    <hr>
+    <div asp-validation-summary="All"></div>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <div class="form-group">
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Quote"></span>
+            <label asp-for="Quote"></label>
+            <input type="text" asp-for="Quote">
+        </div>
+        <button type="submit">Submit!</button>
+    </form>
+        <form action="/quotes" method="get">
+            <button type="submit">Skip to Quotes!</button>
+        </form>
+</body>
+</html>
